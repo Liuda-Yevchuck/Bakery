@@ -1,0 +1,42 @@
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+%social-link {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.twitter {
+  background-image: url(../images/twitter.svg);
+  @extend %social-link;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  z-index: 5;
+
+}
+
+.facebook {
+  background-image: url(../images/facebook.svg);
+  @extend %social-link;
+}
+
+.linkedin {
+  background-image: url(../images/linkedin.svg);
+  @extend %social-link;
+}
+
+.sociall-media {
+  display: flex;
+  gap: 20px;
+
+  @media (max-width:975px) {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
